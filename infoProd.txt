@@ -1,0 +1,77 @@
+CELULARES
+INSERT INTO infoproductos (codProd, idCaract, valor) 
+VALUES ('', '16', '4G'),('', '13', 'Si'),
+('', '29', 'Tipo C'),('', '3', '13Mpx'),
+('', '17', '2'),('', '4', '50Mpx'),
+('', '18', '5Mpx+2Mpx'),('', '20', 'No'),
+('', '19', 'Si'),('', '1', '128GB'),
+('', '2', '4GB'),('', '5', 'Mediatek'),
+('', '6', 'Android'),('', '7', 'Android 13'),
+('', '8', '8'), ('', '21', '2.2GHz,2GHz'), 
+('', '9', 'Super Amoled'),('', '10', 'FHD+'),('', '11', '6.6  Pulgadas'),
+('', '12', '5000 mAh'),('', '38', 'NA'),
+('', '41', 'Bluetooth, USB y WiFi'),
+('', '47', 'Incluye Cable USB, Pin Ejección '),
+('', '46', 'Lector de huella'),('', '37', 'Bateria Recargable Interna'),
+('', '14', 'Negro');
+
+
+PORTATILES
+INSERT INTO infoproductos (codProd, idCaract, valor) 
+VALUES ('', '22', '8 Horas Aprx'),('', '41', 'Bluetooth, USB, Wifi'),
+('', '23', 'VGA'),('', '24', '1 Puerto'),
+('', '25', '3 Puertos'),('', '26', '1 Puerto'),
+('', '27', '1 Puerto'),('', '28', '1 Puerto'),
+('', '29', 'Tarjeta Micro SD, Puerto HDMI, Puerto USB, Puerto USB 2.0, Puerto USB Tipo C, Salida de Audífonos '),
+('', '36', 'Medio'),('', '46', 'Cámara WEB Integrada, Lector de Huella'),
+('', '10', 'Full HD'),('', '11', '14  Pulgadas'),('', '2', '4GB'),
+('', '30', 'Disco Estado Solido (SSD)'), ('', '31', '256 GB'), 
+('', '5', 'INTEL'),('', '32', 'Intel Core I3'),('', '33', 'Intel Core i3 1115G4 Processor 3.0 GHz'),
+('', '34', 'NA'),('', '6', 'Windows'),('', '7', 'Windows 10 Home'),('', '8', '2'),
+('', '24', '1 Puerto'),('','21','3.0 GHz'),('', '37', 'Batería Recargable Interna, Energía Eléctrica'),('', '14', 'Gris');
+
+
+COMPUTADORES
+INSERT INTO infoproductos (codProd, idCaract, valor) 
+VALUES ('', '23', '5.0 MP'),('', '24', '1 Puerto'),
+('', '35', '1 Puerto'),('', '25', '4 Puertos'),
+('', '28', 'NA'),('', '29', 'Puerto HDMI, Puerto LAN/Ethernet, Puerto USB, Puerto USB 2.0'),
+('', '36', 'Medio'),('', '46', 'Cámara WEB Integrada'),
+('', '10', 'Full HD'),('', '11', '27  Pulgadas'),
+('', '2', '16GB'),('', '30', 'Disco Estado Solido (SSD)'),
+('', '31', '1TB'),('', '5', 'AMD'),
+('', '32', 'AMD R5'), ('', '33', '7530U'), 
+('', '34', 'NA'),('', '6', 'Windows'),('', '7', '11 Home, español'),
+('', '8', '6'),('', '21', '12T, 2,0/4,5 GHz, 3 MB L2/16 MB L3'),
+('', '37', 'Energía Eléctrica'),('', '14', 'Negro'),('', '41', 'NA');
+
+
+TABLETS
+INSERT INTO infoproductos (codProd, idCaract, valor) 
+VALUES ('', '1', '128GB'),('', '5', 'Unisoc'),
+('', '2', '4GB'),('', '6', 'Android'),
+('', '7', 'Android 11'),('', '8', '8'),
+('', '21', '2GHz'),('', '29', 'Tipo C, Micro SD'),
+('', '3', '5Mpx'),('', '4', '8Mpx'),
+('', '22', '12 Horas Aprx'),('', '41', 'Bluetooth, USB, Wifi'),
+('', '10', '1920x1200'),('', '11', '10.5  Pulgadas'),
+('', '37', 'Batería Recargable Interna'), ('', '14', 'Gris'), 
+('', '47', 'Incluye Cable y Adaptador de Carga');
+
+
+AUDIFONOS
+INSERT INTO infoproductos (codProd, idCaract, valor) 
+VALUES ('', '38', 'Salpicaduras'),('', '41', 'Bluetooth'),
+('', '22', '20 Horas Aprx'),('', '42', 'Inalambrica'),
+('', '14', 'Negro'),('', '15', '90');
+
+
+PARLANTES
+INSERT INTO infoproductos (codProd, idCaract, valor) 
+VALUES ('', '38', 'NA'),('', '46', 'Integrado Asistente de Voz'),
+('', '39', 'NA'),('', '37', 'Energía Eléctrica'),
+('', '14', 'Negro'),('', '22', 'NA'),
+('', '40', '30 Metros'),('', '41', 'Bluetooth y Wifi'),
+('', '42', 'Alambrica'),('', '43', '26'),
+('', '44', '16'),('', '45', '18.5'),
+('', '47', 'NA');
