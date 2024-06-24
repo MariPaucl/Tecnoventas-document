@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 03-06-2024 a las 18:24:12
+-- Tiempo de generación: 23-06-2024 a las 23:07:09
 -- Versión del servidor: 8.2.0
 -- Versión de PHP: 8.2.13
 
@@ -30,12 +30,12 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `administradores`;
 CREATE TABLE IF NOT EXISTS `administradores` (
   `idAdmin` int NOT NULL AUTO_INCREMENT,
-  `nomAdmin` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `apeAdmin` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `cargo` varchar(30) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `estado` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `correoAdmin` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `passAdmin` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `nomAdmin` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `apeAdmin` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `cargo` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `estado` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `correoAdmin` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `passAdmin` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   PRIMARY KEY (`idAdmin`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -64,7 +64,7 @@ INSERT INTO `administradores` (`idAdmin`, `nomAdmin`, `apeAdmin`, `cargo`, `esta
 DROP TABLE IF EXISTS `caracteristicas`;
 CREATE TABLE IF NOT EXISTS `caracteristicas` (
   `idCaract` int NOT NULL AUTO_INCREMENT,
-  `nomCaract` varchar(50) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `nomCaract` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`idCaract`)
 ) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -130,7 +130,7 @@ INSERT INTO `caracteristicas` (`idCaract`, `nomCaract`) VALUES
 DROP TABLE IF EXISTS `categorias`;
 CREATE TABLE IF NOT EXISTS `categorias` (
   `codigoCat` int NOT NULL,
-  `nombreCat` varchar(20) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `nombreCat` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`codigoCat`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -155,14 +155,14 @@ INSERT INTO `categorias` (`codigoCat`, `nombreCat`) VALUES
 DROP TABLE IF EXISTS `clientes`;
 CREATE TABLE IF NOT EXISTS `clientes` (
   `idCliente` int NOT NULL AUTO_INCREMENT,
-  `numId` varchar(30) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `tipoId` varchar(2) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `nomCliente` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `apeCliente` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `numId` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `tipoId` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `nomCliente` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `apeCliente` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   `fechaNac` date NOT NULL,
-  `telefono` varchar(30) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `correo` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `passCliente` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `telefono` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `correo` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `passCliente` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   PRIMARY KEY (`idCliente`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -264,7 +264,7 @@ CREATE TABLE IF NOT EXISTS `infoproductos` (
   `idInfo` int NOT NULL AUTO_INCREMENT,
   `codProd` int DEFAULT NULL,
   `idCaract` int DEFAULT NULL,
-  `valor` varchar(200) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `valor` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`idInfo`),
   KEY `codProd` (`codProd`),
   KEY `idCaract` (`idCaract`)
@@ -1306,9 +1306,9 @@ CREATE TABLE IF NOT EXISTS `pedidos` (
   `idCliente` int NOT NULL,
   `fechaPedido` date NOT NULL,
   `horaPedido` time NOT NULL,
-  `dirPedido` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `dirPedido` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   `totalPedido` double NOT NULL,
-  `estadoPedido` varchar(30) COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT 'Pagado',
+  `estadoPedido` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT 'Pagado',
   PRIMARY KEY (`codPedido`),
   KEY `idCliente` (`idCliente`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
@@ -1346,12 +1346,12 @@ DROP TABLE IF EXISTS `productos`;
 CREATE TABLE IF NOT EXISTS `productos` (
   `codProd` int NOT NULL AUTO_INCREMENT,
   `idAdmin` int NOT NULL,
-  `nomProd` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `marca` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `nomProd` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `marca` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   `precio` double NOT NULL,
-  `estProd` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `estProd` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   `stockProd` int DEFAULT NULL,
-  `imagen` varchar(70) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `imagen` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   `codigoCat` int DEFAULT NULL,
   PRIMARY KEY (`codProd`),
   KEY `idAdmin` (`idAdmin`),
@@ -1427,14 +1427,14 @@ INSERT INTO `productos` (`codProd`, `idAdmin`, `nomProd`, `marca`, `precio`, `es
 DROP TABLE IF EXISTS `proveedores`;
 CREATE TABLE IF NOT EXISTS `proveedores` (
   `idProv` int NOT NULL AUTO_INCREMENT,
-  `NIT` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `nomProv` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `correoProv` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `nomCont` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `apeCont` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `direccion` varchar(40) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `telProv` varchar(30) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `paginaWeb` varchar(70) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `NIT` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `nomProv` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `correoProv` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `nomCont` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `apeCont` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `direccion` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `telProv` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
+  `paginaWeb` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   PRIMARY KEY (`idProv`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -1463,8 +1463,8 @@ ALTER TABLE `detallepedidos`
 -- Filtros para la tabla `factura`
 --
 ALTER TABLE `factura`
-  ADD CONSTRAINT `factura_ibfk_1` FOREIGN KEY (`idProv`) REFERENCES `proveedores` (`idProv`),
-  ADD CONSTRAINT `factura_ibfk_2` FOREIGN KEY (`codProd`) REFERENCES `productos` (`codProd`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `factura_ibfk_1` FOREIGN KEY (`idProv`) REFERENCES `proveedores` (`idProv`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `factura_ibfk_2` FOREIGN KEY (`codProd`) REFERENCES `productos` (`codProd`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `infoproductos`
@@ -1483,8 +1483,8 @@ ALTER TABLE `pedidos`
 -- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`idAdmin`) REFERENCES `administradores` (`idAdmin`),
-  ADD CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`codigoCat`) REFERENCES `categorias` (`codigoCat`);
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`idAdmin`) REFERENCES `administradores` (`idAdmin`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`codigoCat`) REFERENCES `categorias` (`codigoCat`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
